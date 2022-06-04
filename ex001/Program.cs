@@ -15,7 +15,7 @@ void GetTwoLevelArray(){
         int count2 = 0;
         while(count2 <size2){
             Random x = new Random();
-            double random = Convert.ToDouble(x.Next(1, 100)/10.00);
+            double random = Convert.ToDouble(x.Next(-100, 100)/10.00);
             
             array[count1, count2] = random;
             count2++;
@@ -35,28 +35,7 @@ void GetTwoLevelArray(){
         }
         Console.WriteLine();
     }
-    
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            ArrayCopy[i, j] = array[i, j];
-        }
-        Console.WriteLine();
-    }
-
-    Console.WriteLine();
-     
-    Console.WriteLine($"Копия массива array:");
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            Console.Write($"{ArrayCopy[i, j]} \t");
-        }
-        Console.WriteLine();
-    }
 
 }
 
-Console.WriteLine("Hello, World!");
+GetTwoLevelArray();
